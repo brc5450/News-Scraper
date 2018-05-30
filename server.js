@@ -16,16 +16,16 @@ var cheerio = require("cheerio");
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the MongoDB
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHEADLINES";
 mongoose.Promise = Promise;
 mongoose.connect( "mongodb://localhost/mongoHEADLINES",{
     useMongoClient: true
 });
 
+var db = mongoose.connection;
 
 //Define port note. must have process.env to deploy app to heroku otherwise h10 error
 
-// var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 // Initialize Express
 var app = express();
