@@ -16,7 +16,7 @@ var cheerio = require("cheerio");
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the MongoDB
 mongoose.Promise = Promise;
-mongoose.connect( {
+mongoose.connect( "mongodb://localhost/mongoHEADLINES",{
     useMongoClient: true
 });
 

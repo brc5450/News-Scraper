@@ -3,7 +3,7 @@
 <div class="container">
 
     <div class="col-md-12 jumbotron">
-        <div class="text-center">
+        <div class="text-center text-white">
             <h1> Saved Articles</h1>
         </div>
     </div>
@@ -18,8 +18,8 @@
                         <p> {{this.summary}}</p>
                         <a href={{this.link}} target="_blank">{{this.link}}</a>
                         <br><br>
-                        <button type="button" class="btn btn-default addNote" data-toggle="modal" data-target="#noteModal{{this._id}}" data-id={{this._id}}>Add a Note</button>
-                        <button type="button" class="btn btn-primary delete" data-id={{this._id}}>Delete</button>
+                        <button type="button" class="btn btn-default addNote" data-toggle="modal" data-target="#noteModal{{this._id}}" data-id={{this._id}}><i class="glyphicon glyphicon-plus"></i>&nbspAdd a Note</button>
+                        <button type="button" class="btn btn-primary delete" data-id={{this._id}}><i class="glyphicon glyphicon-trash"></i>&nbspDelete</button>
                     </div>
                 </div>
             {{/each}}

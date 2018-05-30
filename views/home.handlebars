@@ -1,8 +1,9 @@
 <!--Homepage-->
 <div class="container">
     <div class="col-md-12 jumbotron">
-        <div class="text-center">
-            <h1> New York Times News Scraper</h1>
+        <div class="text-center text-white">
+            <h1>New York Times News Scraper</h1>
+            <h4>scrape, save and comment on your favorite New York Times articles.</h4>
         </div>
 
     </div>
@@ -18,7 +19,7 @@
                     <a href={{this.link}} target="_blank">{{this.link}}</a>
                     <br><br>
                     <!-- Button -->
-                    <button type="button" class="btn btn-default save" data-id={{this._id}}>Save Article</button>
+                    <button type="button" class="btn btn-default save" data-id={{this._id}}><i class="glyphicon glyphicon-ok"></i>&nbspSave Article</button>
                 </div>
             </div>
             {{/each}}
