@@ -15,15 +15,16 @@ var cheerio = require("cheerio");
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the MongoDB
-mongoose.Promise = Promise;
-mongoose.connect( {
-    useMongoClient: true
-});
 
-var db = mongoose.connection;
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHEADLINES";
+mongoose.Promise = Promise;
+mongoose.connect
+
+
 
 //Define port note. must have process.env to deploy app to heroku otherwise h10 error
-var PORT = process.env.PORT || 3000;
+
+// var PORT = process.env.PORT || 3000;
 
 // Initialize Express
 var app = express();
@@ -49,15 +50,15 @@ app.set("view engine", "handlebars");
 
 
 
-// Show any mongoose errors
-db.on("error", function(error) {
-  console.log("Mongoose Error: ", error);
-});
+// // Show any mongoose errors
+// db.on("error", function(error) {
+//   console.log("Mongoose Error: ", error);
+// });
 
-// Log a success message
-db.once("open", function() {
-  console.log("Mongoose connection successful.");
-});
+// // Log a success message
+// db.once("open", function() {
+//   console.log("Mongoose connection successful.");
+// });
 
 
 
@@ -200,7 +201,7 @@ app.post("/notes/save/:id", function(req, res) {
     body: req.body.text,
     article: req.params.id
   });
-  console.log(req.body);
+  console.log(req.body)
   // And save the new note the db
   newNote.save(function(error, note) {
     // Log any errors
