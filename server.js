@@ -17,7 +17,7 @@ var cheerio = require("cheerio");
 // Connect to the MongoDB
 
 mongoose.Promise = Promise;
-mongoose.connect( "mongodb://localhost/mongoHEADLINES",{
+mongoose.connect( "mongodb://heroku_jzbwhlxc:ap6031foqn76bv0hgq1dmg9ab3@ds245150.mlab.com:45150/heroku_jzbwhlxc",{
     useMongoClient: true
 });
 
